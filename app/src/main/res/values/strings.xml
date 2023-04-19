@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">Job_Match_App</string>
+    <string name="navigation_index">Home</string>
+    <string name="navigation_personal_space">Personal Space</string>
+    <string name="navigation_message">Message</string>
 </resources>
