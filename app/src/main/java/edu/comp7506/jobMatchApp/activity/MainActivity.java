@@ -31,22 +31,15 @@ public class MainActivity extends AppCompatActivity {
         //intent
         Intent userIntent = new Intent(this,UserActivity.class);
         Intent registerIntent = new Intent(this,RegisterActivity.class);
-        loginButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                LoginService loginService = new LoginService(username.getText().toString(),password.getText().toString());
-                Thread loginServiceThread = new Thread(loginService);
-                loginServiceThread.start();
-                Log.d("statusCode",""+loginService.getStatusCode());
-                if(loginService.getStatusCode()==1){
-                    Toast t = Toast.makeText(getApplicationContext(),"Login Success!",Toast.LENGTH_SHORT);
-                    t.show();
-                    startActivity(userIntent);
-                }
-                else{
-                    Toast t = Toast.makeText(getApplicationContext(),"Wrong username of password",Toast.LENGTH_LONG);
-                    t.show();
-                }
+        loginButton.setOnClickListener(view -> {
+            if(LoginService.login(username.getText().toString(),password.getText().toString())==1){
+                Toast t = Toast.makeText(getApplicationContext(),"Login Success!",Toast.LENGTH_SHORT);
+                t.show();
+                startActivity(userIntent);
+            }
+            else{
+                Toast t = Toast.makeText(getApplicationContext(),"Wrong username of password",Toast.LENGTH_LONG);
+                t.show();
             }
         });
     }
