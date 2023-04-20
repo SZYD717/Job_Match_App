@@ -4,8 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -32,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
         EditText password = findViewById(R.id.password);
 
         //intent
-        Intent homeIntent = new Intent(this,HomeActivity.class);
+        Intent homeIntent = new Intent(this,JobDetailActivity.class);
         Intent registerIntent = new Intent(this,RegisterActivity.class);
         loginButton.setOnClickListener(view -> {
             LoginService loginService = new LoginService(username.getText().toString(),password.getText().toString());

@@ -41,46 +41,42 @@
             android:layout_height="23dp" />
 
         <TextView
-            android:id="@+id/position_info"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="position_info"
+            android:text="Position Information"
             android:textSize="20sp" />
 
         <MultiAutoCompleteTextView
-            android:id="@+id/multiAutoCompleteTextView"
+            android:id="@+id/position_info"
             android:layout_width="match_parent"
             android:layout_height="124dp"
             android:text="MultiAutoCompleteTextView" />
 
         <TextView
-            android:id="@+id/position_requirement"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Position Requirement"
             android:textSize="20sp" />
 
         <TextView
-            android:id="@+id/position_detailed_requirement"
+            android:id="@+id/position_requirement"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="position_detailed_requirement" />
 
         <TextView
-            android:id="@+id/work_place"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Place of work"
             android:textSize="20sp" />
 
         <TextView
-            android:id="@+id/work_detailed_place"
+            android:id="@+id/work_place"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Place of work" />
 
         <TextView
-            android:id="@+id/referral_person"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Referral Name"
@@ -97,7 +93,6 @@
             android:layout_height="38dp" />
 
         <TextView
-            android:id="@+id/company_information"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Company Information"

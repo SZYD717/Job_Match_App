@@ -21,12 +21,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="edu.comp7506.jobMatchApp.activity.HomeActivity">
-
-        </activity>
-        <activity android:name="edu.comp7506.jobMatchApp.activity.CompanyInfoActivity">
-
-        </activity>
+        <activity android:name="edu.comp7506.jobMatchApp.activity.HomeActivity"/>
+        <activity android:name="edu.comp7506.jobMatchApp.activity.CompanyInfoActivity"/>
+        <activity android:name="edu.comp7506.jobMatchApp.activity.JobDetailActivity"/>
     </application>
 
 </manifest>
