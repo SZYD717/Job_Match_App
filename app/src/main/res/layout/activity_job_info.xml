@@ -79,6 +79,19 @@
             android:layout_height="wrap_content"
             android:text="Place of work" />
 
+        <TextView
+            android:id="@+id/referral_person"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Referral Name"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/referral_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="referral_info" />
+
         <Space
             android:layout_width="match_parent"
             android:layout_height="38dp" />

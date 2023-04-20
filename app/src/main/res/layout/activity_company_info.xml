@@ -23,8 +23,8 @@
             android:id="@+id/company_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Company_name"
-            android:textSize="20sp" />
+            android:text="Company name"
+            android:textSize="34sp" />
 
         <TextView
             android:id="@+id/company_attribute"
@@ -46,10 +46,23 @@
             android:text="Company Official Website " />
 
         <TextView
+            android:id="@+id/company_introduction"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Company introduction"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/company_detailed_intro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="company_detailed_intro" />
+
+        <TextView
             android:id="@+id/company_positions"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="All of the company’s positions are in recruitment"
+            android:text="All of the company’s positions"
             android:textSize="20sp" />
     </LinearLayout>
 
