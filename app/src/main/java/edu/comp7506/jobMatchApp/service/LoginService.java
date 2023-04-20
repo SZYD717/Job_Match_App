@@ -10,8 +10,20 @@ import okhttp3.Request;
 import okhttp3.RequestBody;
 import okhttp3.Response;
 
-public class LoginService{
-    public static int login(String username, String password) {
+import java.util.concurrent.Callable;
+
+public class LoginService implements Callable<Integer> {
+
+    private final String username;
+    private final String password;
+
+    public LoginService(String username, String password) {
+        this.username = username;
+        this.password = password;
+    }
+
+    @Override
+    public Integer call() throws Exception {
         int statusCode = 0;
         String urlStr = "http://192.168.3.7:8090/login";
         String requestBody = "?name="+username+"&password="+password;

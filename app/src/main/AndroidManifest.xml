@@ -24,6 +24,9 @@
         <activity android:name="edu.comp7506.jobMatchApp.activity.UserActivity">
 
         </activity>
+        <activity android:name="edu.comp7506.jobMatchApp.activity.CompanyInfoActivity">
+
+        </activity>
     </application>
 
 </manifest>

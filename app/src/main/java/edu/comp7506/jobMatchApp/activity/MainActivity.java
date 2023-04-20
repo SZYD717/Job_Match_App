@@ -15,6 +15,9 @@ import com.example.job_match_app.R;
 
 import edu.comp7506.jobMatchApp.service.LoginService;
 
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.FutureTask;
+
 public class MainActivity extends AppCompatActivity {
     private int adminClickNum;
     @Override
@@ -32,14 +35,22 @@ public class MainActivity extends AppCompatActivity {
         Intent userIntent = new Intent(this,UserActivity.class);
         Intent registerIntent = new Intent(this,RegisterActivity.class);
         loginButton.setOnClickListener(view -> {
-            if(LoginService.login(username.getText().toString(),password.getText().toString())==1){
-                Toast t = Toast.makeText(getApplicationContext(),"Login Success!",Toast.LENGTH_SHORT);
-                t.show();
-                startActivity(userIntent);
-            }
-            else{
-                Toast t = Toast.makeText(getApplicationContext(),"Wrong username of password",Toast.LENGTH_LONG);
-                t.show();
+            LoginService loginService = new LoginService(username.getText().toString(),password.getText().toString());
+            FutureTask<Integer> loginTask = new FutureTask<>(loginService);
+            Thread thread = new Thread(loginTask);
+            thread.start();
+            try {
+                if(loginTask.get()==1){
+                    Toast t = Toast.makeText(getApplicationContext(),"Login Success!",Toast.LENGTH_SHORT);
+                    t.show();
+                    startActivity(userIntent);
+                }
+                else{
+                    Toast t = Toast.makeText(getApplicationContext(),"Wrong username of password",Toast.LENGTH_LONG);
+                    t.show();
+                }
+            } catch (Exception e) {
+                throw new RuntimeException(e);
             }
         });
     }
