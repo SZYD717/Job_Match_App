@@ -35,6 +35,7 @@ public class LoginService implements Callable<Integer> {
             statusCode = jsonObject.getInt("status");
             Log.d("Login","Status "+ statusCode);
         } catch (Exception e) {
+            Log.e("Login",e.getMessage());
             throw new RuntimeException(e);
         }
         return statusCode;
