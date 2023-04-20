@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
         EditText password = findViewById(R.id.password);
 
         //intent
-        Intent userIntent = new Intent(this,UserActivity.class);
+        Intent homeIntent = new Intent(this,HomeActivity.class);
         Intent registerIntent = new Intent(this,RegisterActivity.class);
         loginButton.setOnClickListener(view -> {
             LoginService loginService = new LoginService(username.getText().toString(),password.getText().toString());
@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
                 if(loginTask.get()==1){
                     Toast t = Toast.makeText(getApplicationContext(),"Login Success!",Toast.LENGTH_SHORT);
                     t.show();
-                    startActivity(userIntent);
+                    startActivity(homeIntent);
                 }
                 else{
                     Toast t = Toast.makeText(getApplicationContext(),"Wrong username of password",Toast.LENGTH_LONG);

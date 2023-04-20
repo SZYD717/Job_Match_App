@@ -1,19 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
+
     <item
         android:id="@+id/menu_home"
         android:icon="@drawable/index"
         android:title="@string/navigation_index"
         app:showAsAction="always" />
     <item
-        android:id="@+id/menu_personal"
-        android:icon="@drawable/resume"
-        android:title="@string/navigation_personal_space"
-        app:showAsAction="always" />
-    <item
         android:id="@+id/menu_connect"
         android:icon="@drawable/message"
         android:title="@string/navigation_connect"
         app:showAsAction="always" />
+    <item
+        android:id="@+id/menu_resume"
+        android:icon="@drawable/resume"
+        android:title="@string/navigation_resume"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/menu_personal"
+        android:icon="@drawable/personal"
+        android:title="@string/navigation_personal"
+        app:showAsAction="always" />
+
 </menu>
