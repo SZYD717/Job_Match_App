@@ -1,12 +1,16 @@
 package edu.comp7506.jobMatchApp.adapter;
 
+import android.content.Intent;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.constraintlayout.widget.ConstraintSet;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.job_match_app.R;
@@ -14,6 +18,8 @@ import com.example.job_match_app.R;
 import java.util.List;
 
 import edu.comp7506.jobMatchApp.VO.HomepageVO;
+import edu.comp7506.jobMatchApp.activity.CompanyInfoActivity;
+import edu.comp7506.jobMatchApp.activity.JobDetailActivity;
 
 public class HomepageJobListAdapter extends RecyclerView.Adapter<HomepageJobListAdapter.ViewHolder> {
     List<HomepageVO> jobList;
@@ -38,6 +44,15 @@ public class HomepageJobListAdapter extends RecyclerView.Adapter<HomepageJobList
         holder.getJobSalaryText().setText(salary);
         holder.getJobCityText().setText(job.getJobCity());
         holder.getJobYearText().setText(job.getJobYear().toString()+" Years Experience");
+        //Button setting
+        View.OnClickListener toDetailListener = new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent companyIntent = new Intent(view.getContext(), JobDetailActivity.class);
+                companyIntent.putExtra("jobId",job.getJobId());
+            }
+        };
+        holder.getConstraintLayout().setOnClickListener(toDetailListener);
         String degree;
         switch (job.getJobDegree()){
             case "1": degree = "Bachelor"; break;
@@ -62,6 +77,7 @@ public class HomepageJobListAdapter extends RecyclerView.Adapter<HomepageJobList
         private final TextView jobCityText;
         private final TextView jobYearText;
         private final TextView jobDegreeText;
+        private final ConstraintLayout constraintLayout;
         public ViewHolder(View view) {
             super(view);
             this.jobTitleText = view.findViewById(R.id.jobTitleText);
@@ -69,10 +85,15 @@ public class HomepageJobListAdapter extends RecyclerView.Adapter<HomepageJobList
             this.jobCityText = view.findViewById(R.id.jobCityText);
             this.jobYearText = view.findViewById(R.id.jobYearText);
             this.jobDegreeText = view.findViewById(R.id.jobDegreeText);
+            this.constraintLayout = view.findViewById(R.id.constraintLayout);
         }
 
         public TextView getJobCityText() {
             return jobCityText;
+        }
+
+        public ConstraintLayout getConstraintLayout() {
+            return constraintLayout;
         }
 
         public TextView getJobDegreeText() {
@@ -90,6 +111,7 @@ public class HomepageJobListAdapter extends RecyclerView.Adapter<HomepageJobList
         public TextView getJobYearText() {
             return jobYearText;
         }
+
     }
 }
 

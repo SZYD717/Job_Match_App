@@ -3,7 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="120dp">
+    android:layout_height="120dp"
+    android:id="@+id/constraintLayout">
+
 
     <TextView
         android:id="@+id/jobTitleText"
@@ -45,6 +47,7 @@
         android:id="@+id/jobCityText"
         android:layout_width="80dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
         android:layout_marginBottom="15dp"
         android:text="Beijing"
         android:textSize="14sp"
@@ -65,6 +68,7 @@
         android:id="@+id/jobYearText"
         android:layout_width="140dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
         android:layout_marginBottom="15dp"
         android:text="10 years experience"
         android:textSize="14sp"
@@ -85,6 +89,7 @@
         android:id="@+id/jobDegreeText"
         android:layout_width="110dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
         android:layout_marginBottom="15dp"
         android:text="Master Degree"
         android:textSize="14sp"

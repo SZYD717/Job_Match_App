@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
         EditText password = findViewById(R.id.password);
 
         //intent
-        Intent homeIntent = new Intent(this,JobDetailActivity.class);
+        Intent homeIntent = new Intent(this,HomeActivity.class);
         Intent registerIntent = new Intent(this,RegisterActivity.class);
         loginButton.setOnClickListener(view -> {
             LoginService loginService = new LoginService(username.getText().toString(),password.getText().toString());
