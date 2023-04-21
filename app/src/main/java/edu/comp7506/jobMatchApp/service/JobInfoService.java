@@ -11,13 +11,18 @@ import java.util.concurrent.Callable;
 
 public class JobInfoService implements Callable<JobVO> {
 
+    private final String jobId;
+
+    public JobInfoService(String jobId) {
+        this.jobId = jobId;
+    }
+
     @Override
     public JobVO call() throws Exception {
         JobVO job = null;
         String urlStr = "http://192.168.3.7:8090/job/jobDetail?id=";
-        String requestBody = "1";
         try {
-            String URL = urlStr + requestBody;
+            String URL = urlStr + jobId;
             Request request = new Request.Builder().url(URL).build();
             Response response = new OkHttpClient().newCall(request).execute();
             JSONObject jsonObject = new JSONObject(response.body().string());
