@@ -33,8 +33,9 @@ public class JobDetailActivity extends AppCompatActivity {
         TextView company_name1 = findViewById(R.id.company_name1);
         Button view_company_positions = findViewById(R.id.view_company_positions);
         String companyId = null;
+        String jobId = getIntent().getStringExtra("jobId");
 
-        FutureTask<JobVO> jobTask = new FutureTask<>(new JobInfoService());
+        FutureTask<JobVO> jobTask = new FutureTask<>(new JobInfoService(jobId));
         Thread jobThread = new Thread(jobTask);
         jobThread.start();
         try {

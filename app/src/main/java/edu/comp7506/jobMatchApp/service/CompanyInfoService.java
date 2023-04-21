@@ -21,7 +21,7 @@ public class CompanyInfoService implements Callable<Company> {
     public Company call() throws Exception {
         Company company = null;
         String urlStr = "http://192.168.3.7:8090/company/";
-        String requestBody = "19c54d283e03745fef615cc1dd484753";
+        String requestBody = companyId;
         try {
             String URL = urlStr + requestBody;
             Request request = new Request.Builder().url(URL).build();
