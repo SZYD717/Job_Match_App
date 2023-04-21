@@ -1,7 +1,6 @@
-
 package edu.comp7506.jobMatchApp.service;
 
-import edu.comp7506.jobMatchApp.model.Company;
+import edu.comp7506.jobMatchApp.VO.JobVO;
 import edu.comp7506.jobMatchApp.utils.JsonUtils;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
@@ -10,27 +9,23 @@ import org.json.JSONObject;
 
 import java.util.concurrent.Callable;
 
-public class CompanyInfoService implements Callable<Company> {
-    String companyId;
-
-    public CompanyInfoService(String companyId) {
-        this.companyId = companyId;
-    }
+public class JobInfoService implements Callable<JobVO> {
 
     @Override
-    public Company call() throws Exception {
-        Company company = null;
-        String urlStr = "http://192.168.3.7:8090/company/";
-        String requestBody = "19c54d283e03745fef615cc1dd484753";
+    public JobVO call() throws Exception {
+        JobVO job = null;
+        String urlStr = "http://192.168.3.7:8090/job/jobDetail?id=";
+        String requestBody = "1";
         try {
             String URL = urlStr + requestBody;
             Request request = new Request.Builder().url(URL).build();
             Response response = new OkHttpClient().newCall(request).execute();
             JSONObject jsonObject = new JSONObject(response.body().string());
-            company = JsonUtils.jsonToObject(jsonObject.getJSONObject("data").toString(), Company.class);
+            String data = jsonObject.getJSONObject("data").toString();
+            job = JsonUtils.jsonToObject(data, JobVO.class);
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
-        return company;
+        return job;
     }
 }

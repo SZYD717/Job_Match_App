@@ -21,9 +21,10 @@ public class CompanyInfoActivity extends AppCompatActivity {
         TextView companyName = findViewById(R.id.company_name);
         TextView companyAttribute = findViewById(R.id.company_attribute);
         TextView companyWebsite = findViewById(R.id.company_official_website);
+        TextView companyIntroduction = findViewById(R.id.company_introduction);
+        String companyId = getIntent().getStringExtra("companyId");
 
-
-        FutureTask<Company> task = new FutureTask<>(new CompanyInfoService());
+        FutureTask<Company> task = new FutureTask<>(new CompanyInfoService(companyId));
         Thread thread = new Thread(task);
         thread.start();
         try {
@@ -31,6 +32,7 @@ public class CompanyInfoActivity extends AppCompatActivity {
             companyName.setText(company.getCompanyName());
             companyAttribute.setText(company.getCompanyStage()+"  |  "+company.getCompanyIndustry());
             companyWebsite.setText(company.getCompanyWebsite());
+            companyIntroduction.setText(company.getCompanyDesc());
         } catch (Exception e) {
             throw new RuntimeException(e);
         }

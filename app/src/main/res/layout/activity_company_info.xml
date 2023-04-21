@@ -46,14 +46,13 @@
             android:text="Company Official Website " />
 
         <TextView
-            android:id="@+id/company_introduction"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Company introduction"
             android:textSize="20sp" />
 
         <TextView
-            android:id="@+id/company_detailed_intro"
+            android:id="@+id/company_introduction"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="company_detailed_intro" />
