@@ -16,14 +16,14 @@ public class Customer implements Serializable {
 
     private String customerPassword;
 
-    private Date customerRegisterTime;
+    private String customerRegisterTime;
 
     private Integer status;
 
     public Customer() {
     }
 
-    public Customer(String customerId, String customerName, Long customerTele, String customerEmail, String customerPassword, Date customerRegisterTime, Integer status) {
+    public Customer(String customerId, String customerName, Long customerTele, String customerEmail, String customerPassword, String customerRegisterTime, Integer status) {
         this.customerId = customerId;
         this.customerName = customerName;
         this.customerTele = customerTele;
@@ -73,11 +73,11 @@ public class Customer implements Serializable {
         this.customerPassword = customerPassword;
     }
 
-    public Date getCustomerRegisterTime() {
+    public String getCustomerRegisterTime() {
         return customerRegisterTime;
     }
 
-    public void setCustomerRegisterTime(Date customerRegisterTime) {
+    public void setCustomerRegisterTime(String customerRegisterTime) {
         this.customerRegisterTime = customerRegisterTime;
     }
 
