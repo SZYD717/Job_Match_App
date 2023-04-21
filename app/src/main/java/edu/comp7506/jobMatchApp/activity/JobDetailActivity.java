@@ -28,9 +28,9 @@ public class JobDetailActivity extends AppCompatActivity {
         TextView positionInfo = findViewById(R.id.position_info);
         TextView positionRequirement = findViewById(R.id.position_requirement);
         TextView workPlace = findViewById(R.id.work_place);
-        TextView referralInfo = findViewById(R.id.referral_info);
+        TextView referralInfo = findViewById(R.id.referralInfo);
         ImageView imageView = findViewById(R.id.company_image);
-        TextView company_name1 = findViewById(R.id.company_name1);
+        TextView company_name1 = findViewById(R.id.job_info_company_name);
         Button view_company_positions = findViewById(R.id.view_company_positions);
         String companyId = null;
         String jobId = getIntent().getStringExtra("jobId");

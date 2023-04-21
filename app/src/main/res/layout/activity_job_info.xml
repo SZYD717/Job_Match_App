@@ -5,136 +5,315 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="84dp"
-        android:orientation="vertical"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="0dp">
+        android:layout_height="match_parent">
 
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="15dp" />
-
-        <TextView
-            android:id="@+id/job_name"
-            android:layout_width="219dp"
-            android:layout_height="wrap_content"
-            android:text="Job Name"
-            android:textSize="34sp" />
-
-        <TextView
-            android:id="@+id/job_salary"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Job Salary" />
+            android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/job_detailInfo"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Job Info" />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/titleLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="23dp" />
+                <TextView
+                    android:id="@+id/job_salary"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginEnd="10dp"
+                    android:text="￥20K—30K"
+                    android:textAlignment="textEnd"
+                    android:textColor="#000000"
+                    android:textSize="24sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/job_name" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Position Information"
-            android:textSize="20sp" />
+                <TextView
+                    android:id="@+id/job_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="15dp"
+                    android:text="FrontEnd programmer"
+                    android:textColor="#000000"
+                    android:textSize="34sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-        <MultiAutoCompleteTextView
-            android:id="@+id/position_info"
-            android:layout_width="match_parent"
-            android:layout_height="124dp"
-            android:text="MultiAutoCompleteTextView" />
+                <TextView
+                    android:id="@+id/job_detailInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="1 year | 1 vancaiwdiwa | efiajwi"
+                    android:textAlignment="center"
+                    app:layout_constraintTop_toBottomOf="@+id/job_salary"
+                    tools:layout_editor_absoluteX="-18dp" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Position Requirement"
-            android:textSize="20sp" />
+                <View
+                    android:id="@+id/divider2"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="?android:attr/listDivider"
+                    app:layout_constraintBottom_toBottomOf="@+id/titleLayout"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/job_detailInfo" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <TextView
-            android:id="@+id/position_requirement"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="position_detailed_requirement" />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/referralLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Place of work"
-            android:textSize="20sp" />
+                <TextView
+                    android:id="@+id/referralNameText"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Referral Name"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/work_place"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Place of work" />
+                <TextView
+                    android:id="@+id/referralInfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="10dp"
+                    android:text="2020 Honor Alumni"
+                    android:textColor="#00796B"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Referral Name"
-            android:textSize="20sp" />
+                <ImageView
+                    android:id="@+id/mailImage"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="10dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/referralMail"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/referralNameText"
+                    app:srcCompat="@drawable/mail" />
 
-        <TextView
-            android:id="@+id/referral_info"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="referral_info" />
+                <TextView
+                    android:id="@+id/referralMail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="test@test.test"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/mailImage"
+                    app:layout_constraintTop_toBottomOf="@+id/referralNameText" />
 
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="38dp" />
+                <View
+                    android:id="@+id/divider6"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="?android:attr/listDivider"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Company Information"
-            android:textSize="20sp" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <ImageView
-            android:id="@+id/company_image"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            tools:srcCompat="@tools:sample/avatars" />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/jobInfoLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-        <TextView
-            android:id="@+id/company_name1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Company Name"
-            android:textSize="20sp" />
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:text="About this position"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/enterprise_scale"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Enterprise scale" />
+                <TextView
+                    android:id="@+id/job_info_jobCityText"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Beijing"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toEndOf="@+id/job_info_location_icon"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/company_Industry"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Company Industry" />
+                <ImageView
+                    android:id="@+id/job_info_location_icon"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintStart_toEndOf="@+id/textView4"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/location" />
 
-        <Button
-            android:id="@+id/view_company_positions"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="View all positions" />
+                <TextView
+                    android:id="@+id/position_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="10dp"
+                    android:text="Job Description\n  1- Business requirement analysis, participate in core system design, development and maintenance;\n 2-Participate in the flexibility and stability construction of the core system, and guarantee the high availability of the online system;\n 3-Participate in team technical communication and sharing activities, and make progress together with the team.\n\n Job Qualifications\n  1-The general undergraduate degree or above students, 24 graduates preferred;\n 2-Familiar with JAVA object-oriented and multi-threaded, network and other basic programming, familiar with microservices, message queues, MYSQL and other technologies;\n 3-Solid professional foundation, familiar with common data structures and algorithms, a deep understanding of computing networks, operating systems, etc.;\n 4-High sense of responsibility and mission, love e-commerce, passionate about using technical means to achieve the ultimate user experience;\n 5-Love computer and Internet technology, enjoy solving challenging problems and pursue excellent code performance;\n 6-Having internship experience in Internet companies is preferred;\n 7- Experience in winning programming competitions or having independent representative works is preferred;\n 8-Self-driven, have ideas and dare to practice."
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/position_requirement" />
 
-        <Button
-            android:id="@+id/apply_position"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Apply" />
+                <TextView
+                    android:id="@+id/position_requirement"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="10dp"
+                    android:text="position_detailed_requirement"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
-    </LinearLayout>
+                <View
+                    android:id="@+id/divider7"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="?android:attr/listDivider"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/position_info" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/company_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    app:layout_constraintBottom_toTopOf="@+id/divider8"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:srcCompat="@tools:sample/avatars" />
+
+                <TextView
+                    android:id="@+id/job_info_company_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Alibaba"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toEndOf="@+id/company_image"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/scale_image"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    app:layout_constraintStart_toEndOf="@+id/company_image"
+                    app:layout_constraintTop_toBottomOf="@+id/job_info_company_name"
+                    app:srcCompat="@drawable/scale" />
+
+                <TextView
+                    android:id="@+id/enterprise_scale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="4dp"
+                    android:text="10,000+"
+                    app:layout_constraintStart_toEndOf="@+id/scale_image"
+                    app:layout_constraintTop_toBottomOf="@+id/job_info_company_name" />
+
+                <ImageView
+                    android:id="@+id/industry_image"
+                    android:layout_width="19dp"
+                    android:layout_height="19dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="5dp"
+                    app:layout_constraintStart_toEndOf="@+id/enterprise_scale"
+                    app:layout_constraintTop_toBottomOf="@+id/job_info_company_name"
+                    app:srcCompat="@drawable/industrial" />
+
+                <TextView
+                    android:id="@+id/company_Industry"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:text="e-Commerce"
+                    app:layout_constraintStart_toEndOf="@+id/industry_image"
+                    app:layout_constraintTop_toBottomOf="@+id/job_info_company_name" />
+
+                <View
+                    android:id="@+id/divider8"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="?android:attr/listDivider"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <Button
+                    android:id="@+id/view_company_positions"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="25dp"
+                    android:layout_marginBottom="4dp"
+                    android:text="View all positions"
+                    app:layout_constraintBottom_toTopOf="@+id/divider8"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="70dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/apply_position"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:text="Apply"
+        app:layout_constraintBottom_toBottomOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
