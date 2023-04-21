@@ -8,6 +8,7 @@ import android.widget.LinearLayout;
 
 import android.widget.SearchView;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.job_match_app.R;
@@ -45,6 +46,7 @@ public class HomeFragment extends Fragment {
         RecyclerView recyclerView = view.findViewById(R.id.home_recyclerView);
         try {
             HomepageJobListAdapter adapter = new HomepageJobListAdapter(homeJobTask.get());
+            recyclerView.addItemDecoration(new DividerItemDecoration(recyclerView.getContext(),DividerItemDecoration.VERTICAL));
             recyclerView.setAdapter(adapter);
         } catch (Exception e) {
             throw new RuntimeException(e);
