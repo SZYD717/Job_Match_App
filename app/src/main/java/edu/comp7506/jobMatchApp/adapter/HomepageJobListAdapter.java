@@ -48,8 +48,9 @@ public class HomepageJobListAdapter extends RecyclerView.Adapter<HomepageJobList
         View.OnClickListener toDetailListener = new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent companyIntent = new Intent(view.getContext(), JobDetailActivity.class);
-                companyIntent.putExtra("jobId",job.getJobId());
+                Intent jobIntent = new Intent(view.getContext(), JobDetailActivity.class);
+                jobIntent.putExtra("jobId",job.getJobId());
+                view.getContext().startActivity(jobIntent);
             }
         };
         holder.getConstraintLayout().setOnClickListener(toDetailListener);
