@@ -173,17 +173,16 @@
                     app:srcCompat="@drawable/location" />
 
                 <TextView
-                    android:id="@+id/position_info"
-                    android:layout_width="match_parent"
+                    android:id="@+id/jobDescriptionTitleText"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="5dp"
-                    android:layout_marginEnd="10dp"
-                    android:text="Job Description\n  1- Business requirement analysis, participate in core system design, development and maintenance;\n 2-Participate in the flexibility and stability construction of the core system, and guarantee the high availability of the online system;\n 3-Participate in team technical communication and sharing activities, and make progress together with the team.\n\n Job Qualifications\n  1-The general undergraduate degree or above students, 24 graduates preferred;\n 2-Familiar with JAVA object-oriented and multi-threaded, network and other basic programming, familiar with microservices, message queues, MYSQL and other technologies;\n 3-Solid professional foundation, familiar with common data structures and algorithms, a deep understanding of computing networks, operating systems, etc.;\n 4-High sense of responsibility and mission, love e-commerce, passionate about using technical means to achieve the ultimate user experience;\n 5-Love computer and Internet technology, enjoy solving challenging problems and pursue excellent code performance;\n 6-Having internship experience in Internet companies is preferred;\n 7- Experience in winning programming competitions or having independent representative works is preferred;\n 8-Self-driven, have ideas and dare to practice."
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.0"
+                    android:text="Job Description"
+                    android:textColor="#000000"
+                    android:textSize="16sp"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/position_requirement" />
+                    app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
                 <TextView
                     android:id="@+id/position_requirement"
@@ -192,10 +191,23 @@
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="5dp"
                     android:layout_marginEnd="10dp"
-                    android:text="position_detailed_requirement"
+                    android:text=" 1- Business requirement analysis, participate in core system design, development and maintenance;\n 2-Participate in the flexibility and stability construction of the core system, and guarantee the high availability of the online system;\n 3-Participate in team technical communication and sharing activities, and make progress together with the team."
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView4" />
+                    app:layout_constraintTop_toBottomOf="@+id/jobDescriptionTitleText" />
+
+                <TextView
+                    android:id="@+id/position_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="10dp"
+                    android:text=" 1-The general undergraduate degree or above students, 24 graduates preferred;\n 2-Familiar with JAVA object-oriented and multi-threaded, network and other basic programming, familiar with microservices, message queues, MYSQL and other technologies;\n 3-Solid professional foundation, familiar with common data structures and algorithms, a deep understanding of computing networks, operating systems, etc.;\n 4-High sense of responsibility and mission, love e-commerce, passionate about using technical means to achieve the ultimate user experience;\n 5-Love computer and Internet technology, enjoy solving challenging problems and pursue excellent code performance;\n 6-Having internship experience in Internet companies is preferred;\n 7- Experience in winning programming competitions or having independent representative works is preferred;\n 8-Self-driven, have ideas and dare to practice."
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/jobQualificationTitleText" />
 
                 <View
                     android:id="@+id/divider7"
@@ -208,6 +220,18 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/position_info" />
+
+                <TextView
+                    android:id="@+id/jobQualificationTitleText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Job Qualifications"
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/position_requirement" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
