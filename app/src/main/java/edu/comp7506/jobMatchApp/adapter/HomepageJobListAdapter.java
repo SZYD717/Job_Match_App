@@ -33,12 +33,21 @@ public class HomepageJobListAdapter extends RecyclerView.Adapter<HomepageJobList
         Log.i("adapter",jobList.get(position).toString());
         HomepageVO job = jobList.get(position);
         holder.getJobTitleText().setText(job.getJobName());
-        String salary = Integer.toString(job.getJobMinSalary()/1000)+"k — "+
-                Integer.toString(job.getJobMaxSalary()/1000)+"k";
+        String salary = "¥ "+Integer.toString(job.getJobMinSalary()/1000)+"K — "+
+                Integer.toString(job.getJobMaxSalary()/1000)+"K";
         holder.getJobSalaryText().setText(salary);
         holder.getJobCityText().setText(job.getJobCity());
-        holder.getJobYearText().setText(job.getJobYear());
-        holder.getJobDegreeText().setText(job.getJobDegree());
+        holder.getJobYearText().setText(job.getJobYear().toString()+" Years Experience");
+        String degree;
+        switch (job.getJobDegree()){
+            case "1": degree = "Bachelor"; break;
+            case "2": degree = "Master"; break;
+            case "3": degree = "Doctor"; break;
+            case "0": degree = "No Degree"; break;
+            default:
+                throw new IllegalStateException("Unexpected value: " + job.getJobDegree());
+        }
+        holder.getJobDegreeText().setText(degree);
 
     }
 

@@ -7,12 +7,13 @@
 
     <TextView
         android:id="@+id/jobTitleText"
-        android:layout_width="200dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="15dp"
         android:layout_marginTop="15dp"
-        android:text="job title"
-        android:textSize="24sp"
+        android:text="Java/C++ Backend engineer"
+        android:textColor="@color/black"
+        android:textSize="22sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -24,42 +25,70 @@
         android:layout_marginEnd="15dp"
         android:text="$20k-24k"
         android:textAlignment="viewEnd"
+        android:textColor="@color/black"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/jobTitleText"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <ImageView
+        android:id="@+id/location_icon"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginBottom="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/location" />
+
     <TextView
         android:id="@+id/jobCityText"
         android:layout_width="80dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="15dp"
-        android:layout_marginBottom="10dp"
-        android:text="job city"
-        android:textSize="22sp"
+        android:layout_marginBottom="15dp"
+        android:text="Beijing"
+        android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toEndOf="@+id/location_icon" />
+
+    <ImageView
+        android:id="@+id/work_experience_icon"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_marginBottom="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/jobYearText"
+        app:layout_constraintStart_toEndOf="@+id/jobCityText"
+        app:srcCompat="@drawable/work_experience" />
 
     <TextView
         android:id="@+id/jobYearText"
-        android:layout_width="80dp"
+        android:layout_width="140dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginBottom="10dp"
-        android:text="job year"
-        android:textSize="22sp"
+        android:layout_marginBottom="15dp"
+        android:text="10 years experience"
+        android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/jobCityText" />
+        app:layout_constraintStart_toEndOf="@id/work_experience_icon" />
+
+    <ImageView
+        android:id="@+id/degree_icon"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_marginBottom="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/jobDegreeText"
+        app:layout_constraintStart_toEndOf="@+id/jobYearText"
+        app:srcCompat="@drawable/degree" />
 
     <TextView
         android:id="@+id/jobDegreeText"
-        android:layout_width="120dp"
+        android:layout_width="110dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginBottom="10dp"
-        android:text="job degree"
-        android:textSize="22sp"
+        android:layout_marginBottom="15dp"
+        android:text="Master Degree"
+        android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/jobYearText" />
+        app:layout_constraintStart_toEndOf="@+id/degree_icon" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
