@@ -153,7 +153,7 @@
 
                 <TextView
                     android:id="@+id/job_info_jobCityText"
-                    android:layout_width="80dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="5dp"
                     android:layout_marginTop="10dp"
@@ -330,7 +330,7 @@
 
             <Space
                 android:layout_width="match_parent"
-                android:layout_height="100dp" />
+                android:layout_height="90dp" />
 
         </LinearLayout>
     </ScrollView>
@@ -339,6 +339,7 @@
         android:id="@+id/apply_position"
         android:layout_width="match_parent"
         android:layout_height="100dp"
+        android:layout_marginBottom="-5dp"
         android:text="Apply"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent" />
