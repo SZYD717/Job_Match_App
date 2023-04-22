@@ -27,7 +27,7 @@ public class JobDetailActivity extends AppCompatActivity {
         TextView jobDetail = findViewById(R.id.job_detailInfo);
         TextView positionInfo = findViewById(R.id.position_info);
         TextView positionRequirement = findViewById(R.id.position_requirement);
-        TextView workPlace = findViewById(R.id.work_place);
+        TextView workPlace = findViewById(R.id.job_info_jobCityText);
         TextView referralInfo = findViewById(R.id.referralInfo);
         ImageView imageView = findViewById(R.id.company_image);
         TextView company_name1 = findViewById(R.id.job_info_company_name);
