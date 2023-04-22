@@ -2,6 +2,8 @@ package edu.comp7506.jobMatchApp.activity;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -13,6 +15,7 @@ import edu.comp7506.jobMatchApp.model.Company;
 import edu.comp7506.jobMatchApp.service.CompanyInfoService;
 import edu.comp7506.jobMatchApp.service.JobInfoService;
 
+import java.net.URL;
 import java.util.concurrent.FutureTask;
 
 public class JobDetailActivity extends AppCompatActivity {
@@ -52,9 +55,15 @@ public class JobDetailActivity extends AppCompatActivity {
             jobDetail.setText(job.getJobYear()+" Years | "+job.getJobDegree()+" | "+ job.getJobNeedNumber() + " vacancies | " + job.getJobPublishTime() + " Published");
             positionInfo.setText(job.getJobDuty());
             positionRequirement.setText(job.getJobDemand());
+            URL url = null;
+            try {
+                url = new URL(job.getCompanyLogo());
+                requestImg(url);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
             workPlace.setText(job.getJobAddress());
             companyId = job.getCompanyId();
-
         }catch (Exception e) {
             throw new RuntimeException(e);
         }
@@ -74,5 +83,22 @@ public class JobDetailActivity extends AppCompatActivity {
                 throw new RuntimeException(e);
             }
         }
+    }
+    private void requestImg(final URL imgUrl)
+    {
+        new Thread(() -> {
+            Bitmap bitmap = null;
+            try {
+                bitmap = BitmapFactory.decodeStream(imgUrl.openStream());
+                showImg(bitmap);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }).start();
+    }
+    private void showImg(final Bitmap bitmap){
+        runOnUiThread(() -> {
+            ImageView imageView = findViewById(R.id.company_image);
+            imageView.setImageBitmap(bitmap);});
     }
 }
