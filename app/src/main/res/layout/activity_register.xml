@@ -175,6 +175,7 @@
         android:id="@+id/register_registerButton"
         android:layout_width="0dp"
         android:layout_height="100dp"
+        android:layout_marginBottom="-8dp"
         android:text="sign on"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"

@@ -339,7 +339,7 @@
         android:id="@+id/apply_position"
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:layout_marginBottom="-5dp"
+        android:layout_marginBottom="-8dp"
         android:text="Apply"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent" />
