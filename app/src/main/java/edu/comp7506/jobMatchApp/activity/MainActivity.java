@@ -1,5 +1,6 @@
 package edu.comp7506.jobMatchApp.activity;
 
+import android.content.SharedPreferences;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -8,10 +9,12 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import edu.comp7506.jobMatchApp.model.Customer;
 import edu.comp7506.jobMatchApp.service.LoginService;
 import com.example.job_match_app.R;
 
 import edu.comp7506.jobMatchApp.service.LoginService;
+import edu.comp7506.jobMatchApp.utils.JsonUtils;
 
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.FutureTask;
@@ -34,13 +37,18 @@ public class MainActivity extends AppCompatActivity {
         Intent registerIntent = new Intent(this,RegisterActivity.class);
         loginButton.setOnClickListener(view -> {
             LoginService loginService = new LoginService(username.getText().toString(),password.getText().toString());
-            FutureTask<Integer> loginTask = new FutureTask<>(loginService);
+            FutureTask<Customer> loginTask = new FutureTask<>(loginService);
             Thread thread = new Thread(loginTask);
             thread.start();
             try {
-                if(loginTask.get()==1){
+                Customer user = loginTask.get();
+                if(user!=null){
                     Toast t = Toast.makeText(getApplicationContext(),"Login Success!",Toast.LENGTH_SHORT);
                     t.show();
+                    SharedPreferences sharedPreferences = getSharedPreferences("cache", MODE_PRIVATE);
+                    SharedPreferences.Editor editor = sharedPreferences.edit();
+                    editor.putString("user", JsonUtils.toJSONString(user));
+                    editor.apply();
                     startActivity(homeIntent);
                 }
                 else{

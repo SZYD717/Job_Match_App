@@ -24,12 +24,14 @@ public class JobVO implements Serializable {
     private int jobMinSalary;
     private int jobMaxSalary;
     private String jobSearchKeyword;
+    private String jobReferralEmail;
+    private String jobReferralPosition;
     private String status;
 
     public JobVO() {
     }
 
-    public JobVO(String jobId, String companyId, String companyName, String companyEmpCount, String companyIndustry, String companyLogo, String jobName, String jobCity, String jobYear, String jobDegree, int jobNeedNumber, String jobPublishTime, String jobWelfare, String jobDuty, String jobDemand, String jobAddress, int jobMinSalary, int jobMaxSalary, String jobSearchKeyword, String status) {
+    public JobVO(String jobId, String companyId, String companyName, String companyEmpCount, String companyIndustry, String companyLogo, String jobName, String jobCity, String jobYear, String jobDegree, int jobNeedNumber, String jobPublishTime, String jobWelfare, String jobDuty, String jobDemand, String jobAddress, int jobMinSalary, int jobMaxSalary, String jobSearchKeyword, String jobReferralEmail, String jobReferralPosition, String status) {
         this.jobId = jobId;
         this.companyId = companyId;
         this.companyName = companyName;
@@ -49,6 +51,8 @@ public class JobVO implements Serializable {
         this.jobMinSalary = jobMinSalary;
         this.jobMaxSalary = jobMaxSalary;
         this.jobSearchKeyword = jobSearchKeyword;
+        this.jobReferralEmail = jobReferralEmail;
+        this.jobReferralPosition = jobReferralPosition;
         this.status = status;
     }
 
@@ -192,4 +196,19 @@ public class JobVO implements Serializable {
         return status;
     }
 
+    public String getJobReferralEmail() {
+        return jobReferralEmail;
+    }
+
+    public void setJobReferralEmail(String jobReferralEmail) {
+        this.jobReferralEmail = jobReferralEmail;
+    }
+
+    public String getJobReferralPosition() {
+        return jobReferralPosition;
+    }
+
+    public void setJobReferralPosition(String jobReferralPosition) {
+        this.jobReferralPosition = jobReferralPosition;
+    }
 }
