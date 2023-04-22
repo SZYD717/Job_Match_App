@@ -19,7 +19,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Welcom to Job Connect :)"
-            android:textColor="#FF6F00"
+            android:textColor="@color/teal_700"
             android:textSize="24sp" />
 
         <Space
@@ -32,14 +32,14 @@
             android:layout_height="wrap_content"
             android:text="Username"
             android:textColor="#000000"
-            android:textSize="20sp" />
+            android:textSize="24sp" />
 
         <EditText
             android:id="@+id/username"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Enter username"
-            android:textSize="20sp" />
+            android:textSize="22sp" />
 
         <Space
             android:layout_width="match_parent"
@@ -51,7 +51,7 @@
             android:layout_height="wrap_content"
             android:text="Password"
             android:textColor="#000000"
-            android:textSize="20sp" />
+            android:textSize="24sp" />
 
         <EditText
             android:id="@+id/password"
@@ -59,7 +59,7 @@
             android:layout_height="wrap_content"
             android:hint="Enter password"
             android:inputType="textPassword"
-            android:textSize="20sp" />
+            android:textSize="22sp" />
 
         <Button
             android:id="@+id/register_button"
@@ -71,7 +71,8 @@
             android:text="Sign On"
             android:textAlignment="center"
             android:textAllCaps="false"
-            android:textColor="#651FFF"
+            android:textColor="@color/green_500"
+            android:textSize="16sp"
             tools:ignore="RtlCompat" />
 
         <Space
@@ -84,6 +85,7 @@
             android:layout_height="70dp"
             android:text="Login"
             android:textAllCaps="false"
+            android:textColor="@color/yellow_700"
             android:textSize="24sp" />
 
     </LinearLayout>
