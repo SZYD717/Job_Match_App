@@ -241,8 +241,8 @@
 
                 <ImageView
                     android:id="@+id/company_image"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="5dp"
                     android:layout_marginBottom="5dp"
@@ -286,7 +286,7 @@
                     android:id="@+id/industry_image"
                     android:layout_width="19dp"
                     android:layout_height="19dp"
-                    android:layout_marginStart="15dp"
+                    android:layout_marginStart="25dp"
                     android:layout_marginTop="5dp"
                     app:layout_constraintStart_toEndOf="@+id/enterprise_scale"
                     app:layout_constraintTop_toBottomOf="@+id/job_info_company_name"
@@ -318,17 +318,19 @@
                     android:id="@+id/view_company_positions"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
                     android:layout_marginEnd="25dp"
-                    android:layout_marginBottom="4dp"
+                    android:layout_marginBottom="3dp"
                     android:text="View all positions"
                     app:layout_constraintBottom_toTopOf="@+id/divider8"
-                    app:layout_constraintEnd_toEndOf="parent" />
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/company_Industry" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <Space
                 android:layout_width="match_parent"
-                android:layout_height="70dp" />
+                android:layout_height="100dp" />
 
         </LinearLayout>
     </ScrollView>
@@ -336,8 +338,9 @@
     <Button
         android:id="@+id/apply_position"
         android:layout_width="match_parent"
-        android:layout_height="70dp"
+        android:layout_height="100dp"
         android:text="Apply"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
