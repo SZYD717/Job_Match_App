@@ -1,109 +1,124 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
     <LinearLayout
-            android:id="@+id/linearLayout"
-            android:layout_width="409dp"
-            android:layout_height="731dp"
-            android:gravity="left"
-            android:orientation="vertical"
-            tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteX="1dp">
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="160dp"
+        android:gravity="left"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
 
         <TextView
-                android:id="@+id/company_name"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Company name"
-                android:textSize="34sp"/>
+            android:id="@+id/company_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:text="Alibaba"
+            android:textSize="34sp" />
 
         <TextView
-                android:id="@+id/company_attribute"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="attribute String"/>
-
-        <Space
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
-        <Space
-                android:layout_width="match_parent"
-                android:layout_height="23dp"/>
-        <TextView
-                android:id="@+id/company_website"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Company Official Website "
-                android:textSize="20sp"/>
-
-        <TextView
-                android:id="@+id/company_official_website"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Company Official Website "/>
+            android:id="@+id/company_attribute"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="abc | def | ghi" />
 
         <Space
-                android:layout_width="match_parent"
-                android:layout_height="23dp"/>
-        <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Company introduction"
-                android:textSize="20sp"/>
+            android:layout_width="match_parent"
+            android:layout_height="23dp" />
 
         <TextView
-                android:id="@+id/company_introduction"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="company_detailed_intro"/>
+            android:id="@+id/company_website"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Company Official Website "
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/company_official_website"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Company Official Website " />
 
         <Space
-                android:layout_width="match_parent"
-                android:layout_height="23dp"/>
+            android:layout_width="match_parent"
+            android:layout_height="23dp" />
+
         <TextView
-                android:id="@+id/company_positions"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="All of the company’s positions"
-                android:textSize="20sp"/>
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Company introduction"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/company_introduction"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="company_detailed_intro" />
+
+        <View
+            android:id="@+id/divider5"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="?android:attr/listDivider" />
+
+        <TextView
+            android:id="@+id/company_positions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="All of the company’s positions"
+            android:textSize="20sp" />
 
         <TableLayout
-                android:id="@+id/job_item"
-                android:layout_width="match_parent"
-                android:layout_height="498dp"
-                android:padding="16dp">
+            android:id="@+id/job_item"
+            android:layout_width="match_parent"
+            android:layout_height="498dp"
+            android:padding="16dp">
 
             <TableRow>
 
                 <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Position" android:textStyle="bold" android:textSize="16sp"/>
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Position"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
 
                 <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Salary" android:textStyle="bold" android:textSize="16sp"/>
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Salary"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
 
                 <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Location" android:textStyle="bold" android:textSize="16sp"/>
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Location"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
 
             </TableRow>
 
         </TableLayout>
 
     </LinearLayout>
-
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
