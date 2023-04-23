@@ -5,71 +5,105 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
-
     <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="match_parent"
-        android:layout_height="300dp"
-        android:gravity="left"
-        android:orientation="vertical"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="1dp">
+            android:id="@+id/linearLayout"
+            android:layout_width="409dp"
+            android:layout_height="731dp"
+            android:gravity="left"
+            android:orientation="vertical"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="1dp">
+
+        <TextView
+                android:id="@+id/company_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Company name"
+                android:textSize="34sp"/>
+
+        <TextView
+                android:id="@+id/company_attribute"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="attribute String"/>
 
         <Space
-            android:layout_width="match_parent"
-            android:layout_height="50dp" />
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        <Space
+                android:layout_width="match_parent"
+                android:layout_height="23dp"/>
+        <TextView
+                android:id="@+id/company_website"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Company Official Website "
+                android:textSize="20sp"/>
 
         <TextView
-            android:id="@+id/company_name"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Company name"
-            android:textSize="34sp" />
+                android:id="@+id/company_official_website"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Company Official Website "/>
+
+        <Space
+                android:layout_width="match_parent"
+                android:layout_height="23dp"/>
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Company introduction"
+                android:textSize="20sp"/>
 
         <TextView
-            android:id="@+id/company_attribute"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="attribute String" />
+                android:id="@+id/company_introduction"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="company_detailed_intro"/>
 
+        <Space
+                android:layout_width="match_parent"
+                android:layout_height="23dp"/>
         <TextView
-            android:id="@+id/company_website"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Company Official Website "
-            android:textSize="20sp" />
+                android:id="@+id/company_positions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="All of the company’s positions"
+                android:textSize="20sp"/>
 
-        <TextView
-            android:id="@+id/company_official_website"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Company Official Website " />
+        <TableLayout
+                android:id="@+id/job_item"
+                android:layout_width="match_parent"
+                android:layout_height="498dp"
+                android:padding="16dp">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Company introduction"
-            android:textSize="20sp" />
+            <TableRow>
 
-        <TextView
-            android:id="@+id/company_introduction"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="company_detailed_intro" />
+                <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Position" android:textStyle="bold" android:textSize="16sp"/>
 
-        <TextView
-            android:id="@+id/company_positions"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="All of the company’s positions"
-            android:textSize="20sp" />
+                <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Salary" android:textStyle="bold" android:textSize="16sp"/>
+
+                <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Location" android:textStyle="bold" android:textSize="16sp"/>
+
+            </TableRow>
+
+        </TableLayout>
+
     </LinearLayout>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        app:layout_constraintVertical_bias="1.0"
-        tools:layout_editor_absoluteX="0dp" />
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

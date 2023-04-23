@@ -1,8 +1,6 @@
 package edu.comp7506.jobMatchApp.model;
 
 import java.io.Serializable;
-import java.math.BigDecimal;
-import java.util.Date;
 
 
 public class Job implements Serializable {
@@ -21,7 +19,7 @@ public class Job implements Serializable {
 
     private Integer jobNeedNumber;
 
-    private Date jobPublishTime;
+    private String jobPublishTime;
 
     private String jobWelfare;
 
@@ -31,9 +29,9 @@ public class Job implements Serializable {
 
     private String jobAddressDetails;
 
-    private BigDecimal jobMinSalary;
+    private int jobMinSalary;
 
-    private BigDecimal jobMaxSalary;
+    private int jobMaxSalary;
 
     private String jobSearchKeyword;
 
@@ -42,7 +40,7 @@ public class Job implements Serializable {
     public Job() {
     }
 
-    public Job(String jobId, String companyId, String jobName, String jobCity, String jobYear, String jobDegree, Integer jobNeedNumber, Date jobPublishTime, String jobWelfare, String jobDuty, String jobDemand, String jobAddressDetails, BigDecimal jobMinSalary, BigDecimal jobMaxSalary, String jobSearchKeyword, Integer status) {
+    public Job(String jobId, String companyId, String jobName, String jobCity, String jobYear, String jobDegree, Integer jobNeedNumber, String jobPublishTime, String jobWelfare, String jobDuty, String jobDemand, String jobAddressDetails, int jobMinSalary, int jobMaxSalary, String jobSearchKeyword, Integer status) {
         this.jobId = jobId;
         this.companyId = companyId;
         this.jobName = jobName;
@@ -117,11 +115,11 @@ public class Job implements Serializable {
         this.jobNeedNumber = jobNeedNumber;
     }
 
-    public Date getJobPublishTime() {
+    public String getJobPublishTime() {
         return jobPublishTime;
     }
 
-    public void setJobPublishTime(Date jobPublishTime) {
+    public void setJobPublishTime(String jobPublishTime) {
         this.jobPublishTime = jobPublishTime;
     }
 
@@ -157,19 +155,19 @@ public class Job implements Serializable {
         this.jobAddressDetails = jobAddressDetails;
     }
 
-    public BigDecimal getJobMinSalary() {
+    public int getJobMinSalary() {
         return jobMinSalary;
     }
 
-    public void setJobMinSalary(BigDecimal jobMinSalary) {
+    public void setJobMinSalary(int jobMinSalary) {
         this.jobMinSalary = jobMinSalary;
     }
 
-    public BigDecimal getJobMaxSalary() {
+    public int getJobMaxSalary() {
         return jobMaxSalary;
     }
 
-    public void setJobMaxSalary(BigDecimal jobMaxSalary) {
+    public void setJobMaxSalary(int jobMaxSalary) {
         this.jobMaxSalary = jobMaxSalary;
     }
 

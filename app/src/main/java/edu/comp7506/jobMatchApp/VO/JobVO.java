@@ -17,7 +17,7 @@ public class JobVO implements Serializable {
     private String jobDegree;
     private int jobNeedNumber;
     private String jobPublishTime;
-    private String jobWelfare;
+    private String jobReferral;
     private String jobDuty;
     private String jobDemand;
     private String jobAddress;
@@ -31,7 +31,7 @@ public class JobVO implements Serializable {
     public JobVO() {
     }
 
-    public JobVO(String jobId, String companyId, String companyName, String companyEmpCount, String companyIndustry, String companyLogo, String jobName, String jobCity, String jobYear, String jobDegree, int jobNeedNumber, String jobPublishTime, String jobWelfare, String jobDuty, String jobDemand, String jobAddress, int jobMinSalary, int jobMaxSalary, String jobSearchKeyword, String jobReferralEmail, String jobReferralPosition, String status) {
+    public JobVO(String jobId, String companyId, String companyName, String companyEmpCount, String companyIndustry, String companyLogo, String jobName, String jobCity, String jobYear, String jobDegree, int jobNeedNumber, String jobPublishTime, String jobReferral, String jobDuty, String jobDemand, String jobAddress, int jobMinSalary, int jobMaxSalary, String jobSearchKeyword, String jobReferralEmail, String jobReferralPosition, String status) {
         this.jobId = jobId;
         this.companyId = companyId;
         this.companyName = companyName;
@@ -44,7 +44,7 @@ public class JobVO implements Serializable {
         this.jobDegree = jobDegree;
         this.jobNeedNumber = jobNeedNumber;
         this.jobPublishTime = jobPublishTime;
-        this.jobWelfare = jobWelfare;
+        this.jobReferral = jobReferral;
         this.jobDuty = jobDuty;
         this.jobDemand = jobDemand;
         this.jobAddress = jobAddress;
@@ -140,11 +140,11 @@ public class JobVO implements Serializable {
         return jobPublishTime;
     }
 
-    public void setJobWelfare(String jobWelfare) {
-        this.jobWelfare = jobWelfare;
+    public void setJobReferral(String jobReferral) {
+        this.jobReferral = jobReferral;
     }
-    public String getJobWelfare() {
-        return jobWelfare;
+    public String getJobReferral() {
+        return jobReferral;
     }
 
     public void setJobDuty(String jobDuty) {
