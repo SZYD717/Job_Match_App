@@ -32,7 +32,6 @@ public class JobDetailActivity extends AppCompatActivity {
         TextView positionRequirement = findViewById(R.id.position_requirement);
         TextView workPlace = findViewById(R.id.job_info_jobCityText);
         TextView referralInfo = findViewById(R.id.referralInfo);
-        ImageView imageView = findViewById(R.id.company_image);
         TextView company_name1 = findViewById(R.id.job_info_company_name);
         Button view_company_positions = findViewById(R.id.view_company_positions);
         String companyId = null;
@@ -62,7 +61,9 @@ public class JobDetailActivity extends AppCompatActivity {
             } catch (Exception e) {
                 e.printStackTrace();
             }
-            workPlace.setText(job.getJobAddress());
+            System.out.println(job.getJobAddress());
+            System.out.println(job.getJobCity());
+            workPlace.setText(job.getJobCity());
             companyId = job.getCompanyId();
         }catch (Exception e) {
             throw new RuntimeException(e);
