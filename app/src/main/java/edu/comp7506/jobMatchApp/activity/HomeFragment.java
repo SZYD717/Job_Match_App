@@ -10,6 +10,7 @@ import android.widget.SearchView;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import com.example.job_match_app.R;
 
@@ -26,6 +27,8 @@ public class HomeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_home, container, false);
         SearchView searchView = view.findViewById(R.id.home_search);
+        SwipeRefreshLayout swipeRefreshLayout = view.findViewById(R.id.layout_swipe_refresh);
+        RecyclerView recyclerView = view.findViewById(R.id.home_recyclerView);
         HomeService homeService = new HomeService();
         FutureTask<List<HomepageVO>> homeJobTask = new FutureTask<>(homeService);
         Thread t = new Thread(homeJobTask);
@@ -42,8 +45,24 @@ public class HomeFragment extends Fragment {
                 return false;
             }
         });
+
+        swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                try {
+                    FutureTask<List<HomepageVO>> temp_homeJobTask = new FutureTask<>(homeService);
+                    Thread temp_t = new Thread(temp_homeJobTask);
+                    temp_t.start();
+                    HomepageJobListAdapter temp_adapter = new HomepageJobListAdapter(temp_homeJobTask.get());
+                    recyclerView.setAdapter(temp_adapter);
+                    temp_adapter.notifyDataSetChanged();
+                    swipeRefreshLayout.setRefreshing(false);
+                } catch (Exception e) {
+                    throw new RuntimeException(e);
+                }
+            }
+        });
         //滚动表单
-        RecyclerView recyclerView = view.findViewById(R.id.home_recyclerView);
         try {
             HomepageJobListAdapter adapter = new HomepageJobListAdapter(homeJobTask.get());
             recyclerView.setAdapter(adapter);
