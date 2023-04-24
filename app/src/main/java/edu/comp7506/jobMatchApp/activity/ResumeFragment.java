@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TableRow;
 
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
@@ -22,7 +23,8 @@ public class ResumeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_resume, container, false);
         Button resumeReviewButton = view.findViewById(R.id.create_resume_button);
-        resumeReviewButton.setOnClickListener(new View.OnClickListener() {
+        TableRow tableRow = view.findViewById(R.id.table_resume);
+        tableRow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent resumeCreateIntent = new Intent(view.getContext(),ResumeCreateActivity.class);

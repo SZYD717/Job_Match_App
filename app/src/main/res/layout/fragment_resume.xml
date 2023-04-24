@@ -67,7 +67,7 @@
                     android:textSize="16sp" />
             </TableRow>
 
-            <TableRow>
+            <TableRow android:id="@+id/table_resume">
 
                 <TextView
                     android:layout_width="wrap_content"
