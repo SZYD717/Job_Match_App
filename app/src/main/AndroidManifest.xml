@@ -25,6 +25,7 @@
         <activity android:name="edu.comp7506.jobMatchApp.activity.CompanyInfoActivity"/>
         <activity android:name="edu.comp7506.jobMatchApp.activity.JobDetailActivity"/>
         <activity android:name="edu.comp7506.jobMatchApp.activity.RegisterActivity"/>
+        <activity android:name="edu.comp7506.jobMatchApp.activity.ResumeCreateActivity"/>
     </application>
 
 </manifest>

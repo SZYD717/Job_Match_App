@@ -12,38 +12,33 @@
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="74dp">
 
-        <LinearLayout
+        <TextView
             android:layout_width="match_parent"
-            android:layout_height="123dp"
-            android:layout_marginBottom="40dp"
-            android:orientation="vertical">
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="10dp"
+            android:text="Resume Center"
+            android:textSize="38sp" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="5dp"
-                android:layout_marginTop="5dp"
-                android:text="Resume Center"
-                android:textSize="38sp" />
+        <Button
+            android:id="@+id/create_resume_button"
+            android:layout_width="250dp"
+            android:layout_height="80dp"
+            android:layout_marginLeft="150dp"
+            android:text="Create new resume" />
 
-            <View
-                android:id="@+id/divider9"
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginTop="10dp"
-                android:background="?android:attr/listDivider" />
-
-            <Button
-                android:id="@+id/create_resume_button"
-                android:layout_width="258dp"
-                android:layout_height="54dp"
-                android:layout_marginLeft="150dp"
-                android:text="Create new resume" />
-        </LinearLayout>
+        <View
+            android:id="@+id/divider9"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="?android:attr/listDivider" />
 
         <TableLayout
             android:layout_width="match_parent"
-            android:layout_height="450dp">
+            android:layout_height="match_parent">
 
             <TableRow
                 android:layout_width="match_parent"
