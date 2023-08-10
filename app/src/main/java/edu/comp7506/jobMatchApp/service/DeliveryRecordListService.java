@@ -7,6 +7,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.Callable;
 
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.Response;
+
 import edu.comp7506.jobMatchApp.model.Job;
 import edu.comp7506.jobMatchApp.model.Record;
 import edu.comp7506.jobMatchApp.utils.JsonUtils;
