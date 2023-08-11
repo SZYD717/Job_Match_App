@@ -22,7 +22,7 @@ public class ResumeFragment extends Fragment {
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_resume, container, false);
-        Button resumeReviewButton = view.findViewById(R.id.create_resume_button);
+//        Button resumeReviewButton = view.findViewById(R.id.create_resume_button);
         TableRow tableRow = view.findViewById(R.id.table_resume);
         tableRow.setOnClickListener(new View.OnClickListener() {
             @Override

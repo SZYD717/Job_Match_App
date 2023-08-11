@@ -6,43 +6,26 @@ import java.util.Date;
 public class Resume implements Serializable {
 
     private String resumeId;
-
     private String customerId;
-
     private String resumeName;
-
     private String resumeRealName;
-
-    private Date resumeCreateTime;
-
-    private Date resumeUpdateTime;
-
+    private String resumeCreateTime;
+    private String resumeUpdateTime;
     private String resumeProfile;
-
-    private Date resumeBirth;
-
+    private String resumeBirth;
     private Long resumeTele;
-
     private String resumeEmail;
-
     private String resumeGender;
-
     private String resumeLeavingWorking;
-
     private String resumeLiveCity;
-
     private String resumeIdCard;
-
     private Integer resumeIncome;
-
     private String resumeWorkType; //0:part time,1:full time
-
     private Integer status;
-
     public Resume() {
     }
 
-    public Resume(String resumeId, String customerId, String resumeName, String resumeRealName, Date resumeCreateTime, Date resumeUpdateTime, String resumeProfile, Date resumeBirth, Long resumeTele, String resumeEmail, String resumeGender, String resumeLeavingWorking, String resumeLiveCity, String resumeIdCard, Integer resumeIncome, String resumeWorkType, Integer status) {
+    public Resume(String resumeId, String customerId, String resumeName, String resumeRealName, String resumeCreateTime, String resumeUpdateTime, String resumeProfile, String resumeBirth, Long resumeTele, String resumeEmail, String resumeGender, String resumeLeavingWorking, String resumeLiveCity, String resumeIdCard, Integer resumeIncome, String resumeWorkType, Integer status) {
         this.resumeId = resumeId;
         this.customerId = customerId;
         this.resumeName = resumeName;
@@ -94,19 +77,19 @@ public class Resume implements Serializable {
         this.resumeRealName = resumeRealName;
     }
 
-    public Date getResumeCreateTime() {
+    public String getResumeCreateTime() {
         return resumeCreateTime;
     }
 
-    public void setResumeCreateTime(Date resumeCreateTime) {
+    public void setResumeCreateTime(String resumeCreateTime) {
         this.resumeCreateTime = resumeCreateTime;
     }
 
-    public Date getResumeUpdateTime() {
+    public String getResumeUpdateTime() {
         return resumeUpdateTime;
     }
 
-    public void setResumeUpdateTime(Date resumeUpdateTime) {
+    public void setResumeUpdateTime(String resumeUpdateTime) {
         this.resumeUpdateTime = resumeUpdateTime;
     }
 
@@ -118,11 +101,11 @@ public class Resume implements Serializable {
         this.resumeProfile = resumeProfile;
     }
 
-    public Date getResumeBirth() {
+    public String getResumeBirth() {
         return resumeBirth;
     }
 
-    public void setResumeBirth(Date resumeBirth) {
+    public void setResumeBirth(String resumeBirth) {
         this.resumeBirth = resumeBirth;
     }
 

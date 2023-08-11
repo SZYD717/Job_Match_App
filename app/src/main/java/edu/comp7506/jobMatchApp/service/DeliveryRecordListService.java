@@ -25,7 +25,7 @@ public class DeliveryRecordListService implements Callable<List<Record>> {
     @Override
     public List<Record> call() throws Exception {
         List<Record> recordList = new ArrayList<>();
-        String urlStr = "http://192.168.3.7:8090/deliveryRecordList?"+"id="+id+"&type"+"";
+        String urlStr = "http://192.168.1.109:8090/deliveryRecordList?"+"id="+id+"&type"+"";
         try {
             System.out.println("request");
             Request request = new Request.Builder().url(urlStr).get().build();

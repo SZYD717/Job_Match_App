@@ -62,9 +62,7 @@ public class ConnectFragment extends Fragment {
                 tableRow.addView(companyName);
                 tableRow.addView(date);
             }
-        } catch (ExecutionException e) {
-            throw new RuntimeException(e);
-        } catch (InterruptedException e) {
+        } catch (ExecutionException | InterruptedException e) {
             throw new RuntimeException(e);
         }
         return view;

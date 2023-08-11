@@ -54,17 +54,16 @@ public class HomepageJobListAdapter extends RecyclerView.Adapter<HomepageJobList
             }
         };
         holder.getConstraintLayout().setOnClickListener(toDetailListener);
-        String degree;
-        switch (job.getJobDegree()){
-            case "1": degree = "Bachelor"; break;
-            case "2": degree = "Master"; break;
-            case "3": degree = "Doctor"; break;
-            case "0": degree = "No Degree"; break;
-            default:
-                throw new IllegalStateException("Unexpected value: " + job.getJobDegree());
-        }
-        holder.getJobDegreeText().setText(degree);
-
+//        String degree;
+//        switch (job.getJobDegree()){
+//            case "1": degree = "Bachelor"; break;
+//            case "2": degree = "Master"; break;
+//            case "3": degree = "Doctor"; break;
+//            case "0": degree = "No Degree"; break;
+//            default:
+//                throw new IllegalStateException("Unexpected value: " + job.getJobDegree());
+//        }
+        holder.getJobDegreeText().setText(job.getJobDegree());
     }
 
     @Override

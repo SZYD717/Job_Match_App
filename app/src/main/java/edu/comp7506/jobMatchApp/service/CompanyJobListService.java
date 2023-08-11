@@ -22,13 +22,10 @@ public class CompanyJobListService implements Callable<List<Job>> {
     }
     public List<Job> call() throws Exception {
         List<Job> jobList = new ArrayList<>();
-        String urlStr = "http://192.168.3.7:8090/companyJobList/"+companyId;
+        String urlStr = "http://192.168.1.109:8090/companyJobList/"+companyId;
         try {
-            System.out.println("request");
             Request request = new Request.Builder().url(urlStr).get().build();
-            System.out.println("requested");
             Response response = new OkHttpClient().newCall(request).execute();
-            System.out.println("response");
             JSONObject jsonObject = new JSONObject(response.body().string());
             JSONArray jsonArray = jsonObject.getJSONArray("data");
             for(int i=0;i<jsonArray.length();i++){

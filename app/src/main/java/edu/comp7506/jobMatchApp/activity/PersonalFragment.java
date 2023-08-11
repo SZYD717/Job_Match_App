@@ -25,7 +25,6 @@ import static android.content.Context.MODE_PRIVATE;
 public class PersonalFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_personal, container, false);
-        TextView userId = view.findViewById(R.id.user_id);
         EditText userName = view.findViewById(R.id.user_name);
         EditText telephoneNumber = view.findViewById(R.id.user_telephone);
         EditText email = view.findViewById(R.id.user_email);
@@ -38,7 +37,6 @@ public class PersonalFragment extends Fragment {
         String userString = sharedPreferences.getString("user", null);
         try {
             Customer user = JsonUtils.jsonToObject(userString,Customer.class);
-            userId.setText(user.getCustomerId());
             userName.setText(user.getCustomerName());
             telephoneNumber.setText(String.valueOf(user.getCustomerTele()));
             email.setText(user.getCustomerEmail());

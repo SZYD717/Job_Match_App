@@ -29,19 +29,6 @@
 
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:text="User ID"
-            android:textSize="20sp" />
-
-        <TextView
-            android:id="@+id/user_id"
-            android:layout_width="match_parent"
-            android:layout_height="36dp"
-            android:text="User ID"
-            android:textSize="16sp" />
-
-        <TextView
-            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="User Name"
             android:textSize="20sp" />
@@ -93,8 +80,7 @@
             android:layout_width="match_parent"
             android:layout_height="69dp"
             android:ems="10"
-            android:inputType="textPersonName"
-            android:text="Old Password" />
+            android:inputType="textPersonName"/>
 
         <TextView
             android:layout_width="match_parent"
@@ -107,8 +93,7 @@
             android:layout_width="match_parent"
             android:layout_height="69dp"
             android:ems="10"
-            android:inputType="textPersonName"
-            android:text="New Password" />
+            android:inputType="textPersonName"/>
 
         <Button
             android:id="@+id/modify_button"

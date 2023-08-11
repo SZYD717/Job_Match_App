@@ -20,7 +20,7 @@ public class JobInfoService implements Callable<JobVO> {
     @Override
     public JobVO call() throws Exception {
         JobVO job = null;
-        String urlStr = "http://192.168.3.7:8090/job/jobDetail?id=";
+        String urlStr = "http://192.168.1.109:8090/job/jobDetail?id=";
         try {
             String URL = urlStr + jobId;
             Request request = new Request.Builder().url(URL).build();

@@ -22,7 +22,7 @@ public class HomeService implements Callable<List<HomepageVO>> {
     @Override
     public List<HomepageVO> call() throws Exception {
         List<HomepageVO> jobList = new LinkedList<>();
-        String urlStr = "http://192.168.3.7:8090/HomePageJobs";
+        String urlStr = "http://192.168.1.109:8090/HomePageJobs";
         int statusCode;
         try {
             String URL = urlStr;
