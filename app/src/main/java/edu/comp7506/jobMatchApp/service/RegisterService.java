@@ -30,7 +30,7 @@ public class RegisterService implements Callable<Integer> {
     @Override
     public Integer call() throws Exception {
         int status = 0;
-        String url = "http://192.168.1.109:8090/register";
+        String url = "http://192.168.1.7:8090/register";
 
         //request body
         /*

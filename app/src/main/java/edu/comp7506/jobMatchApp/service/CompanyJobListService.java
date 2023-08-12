@@ -22,7 +22,7 @@ public class CompanyJobListService implements Callable<List<Job>> {
     }
     public List<Job> call() throws Exception {
         List<Job> jobList = new ArrayList<>();
-        String urlStr = "http://192.168.1.109:8090/companyJobList/"+companyId;
+        String urlStr = "http://192.168.1.7:8090/companyJobList/"+companyId;
         try {
             Request request = new Request.Builder().url(urlStr).get().build();
             Response response = new OkHttpClient().newCall(request).execute();

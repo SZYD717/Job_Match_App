@@ -24,7 +24,7 @@ public class ResumeService implements Callable<List<Resume>> {
     @Override
     public List<Resume> call() throws Exception {
         List<Resume> resumeList = new ArrayList<>();
-        String urlStr = "http://192.168.1.109:8090/resumeList?id=";
+        String urlStr = "http://192.168.1.7:8090/resumeList?id=";
         try {
             String URL = urlStr + userId;
             Request request = new Request.Builder().url(URL).build();

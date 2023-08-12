@@ -28,7 +28,7 @@ public class LoginService implements Callable<Customer> {
     @Override
     public Customer call() throws Exception {
         Customer user = null;
-        String urlStr = "http://192.168.1.109:8090/login";
+        String urlStr = "http://192.168.1.7:8090/login";
         String requestBody = "?name="+username+"&password="+password;
         try {
             String URL = urlStr + requestBody;

@@ -16,7 +16,7 @@ public class RecordService implements Callable<Integer> {
     @Override
     public Integer call() throws Exception {
         int status = 0;
-        String url = "http://192.168.1.109:8090/deliveryRecord/" + resumeId + "?jobId=" + jobId;
+        String url = "http://192.168.1.7:8090/deliveryRecord/" + resumeId + "?jobId=" + jobId;
         try {
             JSONObject jsonObject = new JSONObject();
             RequestBody requestBody = RequestBody.create(MediaType.parse("application/json"), jsonObject.toString());

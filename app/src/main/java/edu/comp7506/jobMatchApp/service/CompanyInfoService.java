@@ -20,7 +20,7 @@ public class CompanyInfoService implements Callable<Company> {
     @Override
     public Company call() throws Exception {
         Company company = null;
-        String urlStr = "http://192.168.1.109:8090/company/";
+        String urlStr = "http://192.168.1.7:8090/company/";
         String requestBody = companyId;
         try {
             String URL = urlStr + requestBody;
